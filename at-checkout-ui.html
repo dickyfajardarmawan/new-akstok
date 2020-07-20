@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="d-flex justify-content-between align-items-center p-2 d-bg-dark fixed-top">
+        <div class="d-flex justify-content-start align-items-center">
+            <i onclick="klik('menuSidebar')" type="button" class="fa fa-bars d-font-s-20" style="padding-left: 10px;"></i>
+            <div class="input-group mb-2 ml-4" id="navbarCari">
+                <div class="input-group-prepend">
+                    <div class="input-group-text d-bg-white d-border-zero d-border-r-left"><i class="fa fa-search d-font-s-21"></i></div>
+                </div>
+                <input type="text" class="form-control d-border-zero d-border-r-right d-search" placeholder="Search">
+            </div>
+        </div>
+        <div>
+            <img src="img/logo-at-putih.png" width="158px" alt="">
+        </div>
+        <div class="d-flex align-items-center">
+            <i onclick="klik('dropdownKeranjang')" type="button" id="keranjang" class="fa fa-shopping-cart d-font-s-20"></i>
+            <i onclick="klik('dropdownNotifikasi')" type="button" id="notif" class="fa fa-bell-o d-font-s-20 ml-4"></i>
+            <span onclick="klik('dropdownProfile')" type="button" class="d-flex align-items-center">
+                <i id="fotoUser" class="fa fa-user-circle-o ml-4 d-font-s-40"></i>
+                <p id="namaUser" class="m-0 ml-3" style="padding-right: 10px;">PT. Maju</p>
+            </span>
+        </div>
+    </div>
+
+    <!-- menu sidebar -->
+    <div id="menuSidebar" class="w3-sidebar d-bg-dark w3-animate-left" style="width:250px;display: none;">
+        <ul class="list-group" style="color:#000;width: 90%;margin:15px auto;">
+            <li type="button" class="list-group-item"><i class="fa fa-user-o text-primary mr-3"></i> Akun Saya</li>
+            <li class="list-group-item"><i class="fa fa-file-text-o text-danger mr-3"></i> Pemesanan</li>
+            <li class="list-group-item"><i class="fa fa-comment-o text-warning mr-3"></i> Layanan Pelanggan</li>
+            <li class="list-group-item"><i class="fa fa-inbox text-primary mr-3"></i> FAQ</li>
+        </ul>
+    </div>
+
+    <!-- dropdown profile -->
+    <div id="dropdownProfile" class="dropdownProfile w3-animate-top d-bg-white p-3 text-center border-r-15" style="display: none;">
+        <i class="fa fa-user-circle-o d-font-s-70"></i>
+        <h4>PT. Maju</h4>
+        <p class="text-secondary">ID BK 100101010</p>
+        <div class="card">
+            <div class="card-body d-flex align-items-center" style="padding: 0.5rem;">
+                <i class="fa fa-home mx-2"></i>
+                <p class="m-0">Jl. KH. Musa V Pakulonan Barat</p>
+            </div>
+        </div>
+        <div class="card my-3">
+            <div class="card-body d-flex align-items-center" style="padding: 0.5rem;">
+                <i class="fa fa-phone mx-2"></i>
+                <p class="m-0">081363050117</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body d-flex align-items-center" style="padding: 0.5rem;">
+                <i class="fa fa-envelope-o mx-2"></i>
+                <p class="m-0">ptmaju@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- dropdown Keranjang -->
+    <div id="dropdownKeranjang" class="dropdownKeranjang w3-animate-top d-bg-white p-3 border-r-15" style="display: none; width: 400px;">
+        <!-- kalo kosong produknya -->
+        <!-- <h3>Tidak ada keranjang belanja</h3>
+        <i class="fa fa-shopping-cart fa-4x"></i> -->
+        <h3 class="text-secondary text-center mb-4 d-font-weight-600">Keranjang Belanja</h3>
+        <div class="row mb-3">
+            <div class="col-3 mb-3">
+                <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" width="83px" alt="">
+            </div>
+            <div class="col-9 mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="m-0">Semen Dynamix 40 Kg</p>
+                    <i class="fa fa-trash-o text-danger"></i>
+                </div>
+                <p class="text-secondary">Rp 50.000 / Zak</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="hapusMin">
+                        <button onclick="hapusBtn(3)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
+                        <button onclick="kurangBtn(3)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
+                    </div>
+                    <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
+                    <button onclick="tambahBtn(3)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
+                </div>
+            </div>
+            <div class="col-3 mb-3">
+                <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" width="83px" alt="">
+            </div>
+            <div class="col-9 mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="m-0">Semen Dynamix 40 Kg</p>
+                    <i class="fa fa-trash-o text-danger"></i>
+                </div>
+                <p class="text-secondary">Rp 50.000 / Zak</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="hapusMin">
+                        <button onclick="hapusBtn(3)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
+                        <button onclick="kurangBtn(3)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
+                    </div>
+                    <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
+                    <button onclick="tambahBtn(3)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card border-r-25">
+            <div class="card-body d-flex justify-content-between" style="padding: 1.05rem;">
+                <p class="text-secondary m-0">Subtotal (2/5)</p>
+                <p class="m-0">Rp. 250.000</p>
+            </div>
+            <button class="btn btn-danger w-100 py-3 border-r-25">Checkout</button>
+        </div>
+    </div>
+
+    <!-- dropdown notifikasi -->
+    <div id="dropdownNotifikasi" class="dropdownNotifikasi w3-animate-top d-bg-white p-3 border-r-15" style="width: 400px;display: none;">
+        <h3>Latest Information</h3>
+        <hr style="border-top: 1px solid rgb(145, 145, 145)">
+        <div class="d-flex align-items-center my-2">
+            <div class="mr-3">
+                <i class="fa fa-bell fa-2x" style="color: rgb(0, 180, 111);"></i>
+            </div>
+            <div class="w-100">
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="text-secondary">Notifikasi Penjualan</p>
+                    <p class="text-secondary">1 hr ago</p>
+                </div>
+                <p>Pembelian anda diterima oleh PT. Sejahtera</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center my-2">
+            <div class="mr-3">
+                <i class="fa fa-envelope-o fa-2x" style="color: rgb(207, 54, 54);"></i>
+            </div>
+            <div class="w-100">
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="text-secondary">Pesan dari Principal</p>
+                    <p class="text-secondary">2 hr ago</p>
+                </div>
+                <p>Pembelian anda diterima oleh PT. Sejahtera</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center my-2">
+            <div class="mr-3">
+                <i class="fa fa-star-o fa-2x" style="color: rgb(211, 197, 69);"></i>
+            </div>
+            <div class="w-100">
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="text-secondary">Poin</p>
+                    <p class="text-secondary">3 hr ago</p>
+                </div>
+                <p>Selamat anda mendapatkan 100 poin dari Order SALE/AT/1000/000</p>
+            </div>
+        </div>
+        <div class="text-center my-3">
+            <button class="btn btn-light">Lainnya</button>
+        </div>
+    </div>
+
+    <!-- konten header-->
+    <div class="d-mt-70 d-bg-red p-3">
+        <div class="d-flex align-items-center border-r-5 d-bg-white p-2" style="width: 300px;">
+            <p class="d-font-weight-600 m-0 mr-5">Home</p>
+            <p class="m-0"><i class="fa fa-home"></i> Home - Checkout</p>
+        </div>
+    </div>
+
+    <!-- konten isis -->
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body p-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-user-circle-o fa-2x mr-3"></i>
+                            <p class="d-font-weight-600 text-secondary m-0">Distributor Sejahtera</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="d-flex justify-content-between align-items-center p-3 d-bg-dark ">
+        <div class="d-font-s-21">
+            <p class="m-0">Layanan Pelanggan Akses Toko <i class="fa fa-chevron-circle-right"></i></p>
+            <p>Faq <i class="fa fa-chevron-circle-right"></i></p>
+        </div>
+        <div class="text-right">
+            <p class="teksFooterKiri">© 2020 PT Sinergi Informatika Semen Indonesia, <br> anak usaha dari PT Semen Indonesia TBK. <br> All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        //membuat footer yg dinamis
+        var h = window.innerHeight;
+        var h2 = $(document).height();
+        if (h2 == h) {
+            $('#footer').addClass("kelasKaki");
+        }
+
+        // script for mobile version
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                document.getElementById('navbarCari').style.display = 'none';
+                document.getElementById('fotoUser').style.display = 'none';
+                document.getElementById('namaUser').style.display = 'none';
+                $(".btnCekSekarang").removeClass("px-5 py-3");
+                $(".produk").addClass("col-6");
+                $(".subtotal").removeClass("col-10").addClass("col-8");
+                $(".checkout").removeClass("col-2").addClass("col-4");
+            } else {
+                document.getElementById('navbarCari').style.display = '';
+                document.getElementById('fotoUser').style.display = '';
+                document.getElementById('namaUser').style.display = '';
+                $(".btnCekSekarang").addClass("px-5 py-3");
+                $(".subtotal").removeClass("col-8").addClass("col-10");
+                $(".checkout").removeClass("col-4").addClass("col-2");
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 450px)");
+        myFunction(x); // Call listener function at run time
+        x.addListener(myFunction); // Attach listener function on state changes
+
+        function buying(index) {
+            document.getElementById("subtotal").style.display = "block";
+            document.getElementsByClassName('beli')[index].style.display = 'none';
+            document.getElementsByClassName('afterBuy')[index].style.display = 'block';
+        }
+
+        function hapusBtn(index) {
+            document.getElementById("subtotal").style.display = "none";
+            document.getElementsByClassName('afterBuy')[index].style.display = 'none';
+            document.getElementsByClassName('beli')[index].style.display = 'block';
+        }
+
+        function tambahBtn(index) {
+            let ubahAngka = parseInt($('.num')[index].value)
+            $('.num')[index].value = ubahAngka + 1;
+            if ($('.num')[index].value > 1) {
+                document.getElementsByClassName('hapus')[index].style.display = 'none';
+                document.getElementsByClassName('kurang')[index].style.display = 'block';
+            } else {
+                document.getElementsByClassName('hapus')[index].style.display = 'block';
+                document.getElementsByClassName('kurang')[index].style.display = 'none';
+            }
+        }
+
+        function kurangBtn(index) {
+            let ubahAngka = parseInt($('.num')[index].value)
+            $('.num')[index].value = ubahAngka - 1;
+            if ($('.num')[index].value > 1) {
+                document.getElementsByClassName('hapus')[index].style.display = 'none';
+                document.getElementsByClassName('kurang')[index].style.display = 'block';
+            } else {
+                document.getElementsByClassName('hapus')[index].style.display = 'block';
+                document.getElementsByClassName('kurang')[index].style.display = 'none';
+            }
+        }
+
+        function klik(namanya) {
+            if (document.getElementById(namanya).style.display == "none") {
+                w3_open(namanya);
+            } else {
+                w3_close(namanya);
+            }
+        }
+
+        function w3_open(namanya) {
+            document.getElementById(namanya).style.display = "block";
+        }
+
+        function w3_close(namanya) {
+            document.getElementById(namanya).style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

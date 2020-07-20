@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="d-flex justify-content-between align-items-center d-bg-dark fixed-top">
+        <div></div>
+        <img src="img/logo-at-putih.png" alt="" width="217px">
+        <div>
+            <button onclick="klikSignIn()" class="btn btn-secondary border-r-15">SIGN IN</button>
+            <button class="btn btn-secondary mx-3 border-r-15">DAFTAR</button>
+        </div>
+    </div>
+
+    <!-- sidebar masuk -->
+    <div id="sidebarMasuk" class="w3-sidebar d-bg-dark w3-animate-right" style="width:500px;right:0;display:none;">
+        <div class="d-bg-white text-center masuk border-r-15">
+            <img src="img/logo-at.png" class="logoBerwarna mt-5" alt="">
+            <p>Selama datang kembali! Silahkan masuk untuk melanjutkan</p>
+            <form>
+                <div class="form-group mt-5">
+                    <div class="input-group formMasuk mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username or Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group formMasuk mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="padding: 0 14px;"><i class="fa fa-lock"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+                    </div>
+                </div>
+            </form>
+            <div class="my-5">
+                <div class="row">
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-top: .25rem;">
+                        <a href="javascript:void(0)">Remember Me</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="javascript:void(0)">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pb-5">
+                <button class="btn btn-danger">Sign In</button>
+            </div>
+        </div>
+        <div class="text-center my-3">
+            <p>New To Product ? <a href="javascript:void(0)" style="color :#f70202;">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="kontener crop gambar">
+        <img src="img/bg-masthead.jpg" class="d-brightness-50 w-100">
+        <div class="top-left">
+            <P class="d-font-s-70 d-font-weight-800">CEPAT. MUDAH. LEBIH <br> MENGUNTUNGKAN.</P>
+            <P class="d-font-s-21">Selamat datang di Solusi Digital Semen Indonesia. Segera daftar dengan ID Bisnis <br> Kokoh Anda!</p>
+            <button class="btn btn-danger btnDaftarSekarang border-r-25 px-5 py-3">DAFTAR SEKARANG</button>
+        </div>
+        <div class="centered"><i class="fa fa-chevron-down fa-2x"></i></div>
+    </div>
+
+    <div class="container my-5">
+        <h3 class="d-font-weight-600 text-danger text-center">Tentang Solusi Digital Semen Indonesia</h3>
+        <hr>
+        <p class="text-center text-secondary mt-5">Semen Indonesia berkomitmen untuk selalu memberikan layanan terbaik kepada mitra kami dengan menggunakan teknologi dan integrasi semua proses ke dalam satu solusi. Anda dapat melihat dan memesan semua produk Semen Indonesia, membayar dengan berbagai
+            metode pembayaran, memperbarui alamat pengiriman, mendapatkan diskon tambahan, semua di satu tempat.</p>
+    </div>
+
+    <div class="container my-5">
+        <h3 class="d-font-weight-600 text-danger text-center">Cara Penggunaan</h3>
+        <hr>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <img src="img/langkah-1.png" alt="">
+                <h4 class="text-danger d-font-weight-600">Langkah 1</h4>
+                <p class="text-secondary">Daftar dengan ID Bisnis Kokoh Anda</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/langkah-2.png" alt="">
+                <h4 class="text-danger d-font-weight-600">Langkah 2</h4>
+                <p class="text-secondary">Pilih & Bayar pesanan Anda</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/langkah-3.png" alt="">
+                <h4 class="text-danger d-font-weight-600">Langkah 3</h4>
+                <p class="text-secondary">Pesanan dikirim ke toko atau proyek</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h3 class="d-font-weight-600 text-danger text-center">Keuntungan</h3>
+        <hr>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <img src="img/lebih-cepat.png" alt="">
+                <h4 class="d-font-weight-600">Lebih Cepat</h4>
+                <p class="text-secondary">Pengiriman langsung dan dapat dilacak, ke toko atau proyek.</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/lebih-mudah.png" alt="">
+                <h4 class="d-font-weight-600">Lebih Mudah</h4>
+                <p class="text-secondary">Lihat semua produk Semen Indonesia lengkap dengan stok, bayar menggunakan berbagai metode pembayaran, diskon menarik dan persyaratan mudah.</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/lebih-menguntungkan.png" alt="">
+                <h4 class="d-font-weight-600">Lebih Menguntungkan</h4>
+                <p class="text-secondary">Lihat hadiah kontraktual Anda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="d-flex justify-content-between align-items-center p-3 d-bg-dark ">
+        <div class="d-font-s-21">
+            <p class="m-0">Layanan Pelanggan Akses Toko <i class="fa fa-chevron-circle-right"></i></p>
+            <p>Faq <i class="fa fa-chevron-circle-right"></i></p>
+        </div>
+        <div class="text-right">
+            <p>© 2020 PT Sinergi Informatika Semen Indonesia, anak usaha dari PT Semen Indonesia TBK. <br> All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(this).scrollTop(0);
+        });
+
+        function klikSignIn() {
+            if (document.getElementById("sidebarMasuk").style.display == "none") {
+                w3_open();
+            } else {
+                w3_close();
+            }
+        }
+
+        function w3_open() {
+            document.getElementById("sidebarMasuk").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("sidebarMasuk").style.display = "none";
+        }
+
+        //membuat footer yg dinamis
+        var h = window.innerHeight;
+        var h2 = $(document).height();
+        if (h2 == h) {
+            $('#footer').addClass("kelasKaki");
+        }
+    </script>
+</body>
+
+</html>

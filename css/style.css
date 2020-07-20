@@ -1,0 +1,325 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f3f9;
+}
+
+.d-bg-dark {
+    color: #fff;
+    background-color: #515151;
+}
+
+.d-bg-white {
+    color: #000;
+    background-color: #fff;
+}
+
+.d-bg-red {
+    background-color: #b20838;
+}
+
+.d-border-zero {
+    border: 0px;
+}
+
+.d-border-r-right {
+    border-radius: 0 25px 25px 0;
+}
+
+.d-border-r-left {
+    border-radius: 25px 0 0 25px;
+}
+
+.d-search {
+    width: 200px;
+    height: 50px;
+}
+
+.d-font-s-21 {
+    font-size: 21px;
+}
+
+.d-font-s-10 {
+    font-size: 10px;
+}
+
+.d-font-s-15 {
+    font-size: 15px;
+}
+
+.d-font-s-20 {
+    font-size: 20px;
+}
+
+.d-font-s-40 {
+    font-size: 40px;
+}
+
+.d-font-s-50 {
+    font-size: 50px;
+}
+
+.d-font-s-70 {
+    font-size: 70px;
+}
+
+.d-brightness-50 {
+    filter: brightness(50%);
+}
+
+.kontener {
+    position: relative;
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+}
+
+.btn-danger {
+    background-color: #b20838;
+    border-color: #b20838;
+}
+
+.btn-secondary {
+    background-color: #515151;
+    border-color: #515151;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open>.dropdown-toggle.btn-danger {
+    color: #fff;
+    background-color: #b20838;
+    border-color: #b20838;
+}
+
+.centered {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid #b20838;
+    margin: 0 auto;
+    width: 50px;
+}
+
+.text-danger {
+    color: #b20838!important;
+}
+
+.border-r-25 {
+    border-radius: 25px;
+}
+
+.border-r-15 {
+    border-radius: 15px;
+}
+
+.border-r-5 {
+    border-radius: 5px;
+}
+
+.kotak {
+    max-width: 420px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(44, 40, 40, 0.11);
+    background-color: #ffffff;
+    color: #959595;
+}
+
+.crop {
+    width: 100%;
+    height: 375px;
+    overflow: hidden;
+}
+
+.d-font-weight-600 {
+    font-weight: 600;
+}
+
+.btn-light {
+    box-shadow: 0 3px 6px 0 rgba(44, 40, 40, 0.11);
+    background-color: #ffffff;
+    color: #959595;
+}
+
+.categoryBtn button {
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+ ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+
+/* Optional: show position indicator in red */
+
+ ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+.d-merah {
+    color: #b20838;
+}
+
+.mahkota {
+    width: 43px;
+}
+
+.d-mt-70 {
+    margin-top: 70px;
+}
+
+.dropdownProfile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    z-index: 1;
+}
+
+.dropdownNotifikasi {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    z-index: 1;
+}
+
+.dropdownKeranjang {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    z-index: 1;
+}
+
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.kelasKaki {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.produk {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-indicators {
+    z-index: 2;
+}
+
+.gambar {
+    margin-top: 75px;
+}
+
+.logoBerwarna {
+    width: 150px;
+}
+
+.masuk {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.formMasuk {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gambarKreditPro {
+    width: 140px;
+}
+
+@media only screen and (max-width: 450px) {
+    #notif {
+        padding-right: 10px;
+    }
+    .crop {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .d-font-s-21 {
+        font-size: 11px;
+    }
+    .d-font-s-50 {
+        font-size: 20px;
+    }
+    .d-font-s-70 {
+        font-size: 30px;
+    }
+    .kotak {
+        font-size: 8px;
+    }
+    .mahkota {
+        width: 16px;
+    }
+    .categoryBtn {
+        display: flex;
+        overflow: auto;
+    }
+    .categoryBtn button {
+        font-size: 8px;
+    }
+    .daftarProduk {
+        padding: 5px;
+    }
+    .kotakExpired {
+        width: 75px;
+    }
+    .expired {
+        padding: 5px;
+    }
+    #container {
+        overflow: scroll;
+        width: 250px;
+    }
+    #content {
+        width: 550px;
+        white-space: nowrap;
+    }
+    .btnCekSekarang {
+        font-size: 8px;
+    }
+    .teksFooterKiri {
+        font-size: 8px;
+    }
+    .gambarKreditPro {
+        width: 40px;
+    }
+}
