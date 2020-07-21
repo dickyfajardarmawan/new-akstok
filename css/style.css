@@ -82,6 +82,17 @@ body {
     border-color: #b20838;
 }
 
+.btn-primary {
+    background-color: #172B4D;
+    border-color: #172B4D;
+}
+
+.alert-danger {
+    color: #ffffff;
+    background-color: #b20838;
+    border-color: #b20838;
+}
+
 .btn-secondary {
     background-color: #515151;
     border-color: #515151;
