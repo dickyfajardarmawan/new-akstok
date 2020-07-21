@@ -448,9 +448,13 @@
             $('#footer').addClass("kelasKaki");
         }
 
-        // script for mobile version
+        // script responsive
+        var x = window.matchMedia("(max-width: 450px)");
+        myFunction(x); // Call listener function at run time
+        x.addListener(myFunction); // Attach listener function on state changes
         function myFunction(x) {
-            if (x.matches) { // If media query matches
+            if (x.matches) {
+                // mobile version
                 document.getElementById('navbarCari').style.display = 'none';
                 document.getElementById('fotoUser').style.display = 'none';
                 document.getElementById('namaUser').style.display = 'none';
@@ -459,6 +463,7 @@
                 $(".subtotal").removeClass("col-10").addClass("col-8");
                 $(".checkout").removeClass("col-2").addClass("col-4");
             } else {
+                // desktop version
                 document.getElementById('navbarCari').style.display = '';
                 document.getElementById('fotoUser').style.display = '';
                 document.getElementById('namaUser').style.display = '';
@@ -468,9 +473,7 @@
             }
         }
 
-        var x = window.matchMedia("(max-width: 450px)");
-        myFunction(x); // Call listener function at run time
-        x.addListener(myFunction); // Attach listener function on state changes
+
 
         document.getElementById("subtotal").style.display = "none";
 

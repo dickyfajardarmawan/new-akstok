@@ -17,14 +17,14 @@
     <div class="d-flex justify-content-between align-items-center d-bg-dark fixed-top">
         <div></div>
         <img src="img/logo-at-putih.png" alt="" width="217px">
-        <div>
+        <div class="d-flex">
             <button onclick="klikSignIn()" class="btn btn-secondary border-r-15">SIGN IN</button>
             <button class="btn btn-secondary mx-3 border-r-15">DAFTAR</button>
         </div>
     </div>
 
     <!-- sidebar masuk -->
-    <div id="sidebarMasuk" class="w3-sidebar d-bg-dark w3-animate-right" style="width:500px;right:0;display:none;">
+    <div id="sidebarMasuk" class="w3-sidebar d-bg-dark w3-animate-right">
         <div class="d-bg-white text-center masuk border-r-15">
             <img src="img/logo-at.png" class="logoBerwarna mt-5" alt="">
             <p>Selama datang kembali! Silahkan masuk untuk melanjutkan</p>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div class="kontener crop gambar">
+    <div class="kontener cropHome gambar">
         <img src="img/bg-masthead.jpg" class="d-brightness-50 w-100">
         <div class="top-left">
             <P class="d-font-s-70 d-font-weight-800">CEPAT. MUDAH. LEBIH <br> MENGUNTUNGKAN.</P>
@@ -160,6 +160,21 @@
 
         function w3_close() {
             document.getElementById("sidebarMasuk").style.display = "none";
+        }
+
+        // script responsive
+        var x = window.matchMedia("(max-width: 450px)");
+        myFunction(x); // Call listener function at run time
+        x.addListener(myFunction); // Attach listener function on state changes
+        function myFunction(x) {
+            if (x.matches) {
+                // mobile version
+                $(".btnDaftarSekarang").removeClass("px-5 py-3");
+                document.getElementsByClassName('centered')[0].style.display = 'none';
+            } else {
+                // desktop version
+                document.getElementsByClassName('centered')[0].style.display = '';
+            }
         }
 
         //membuat footer yg dinamis
