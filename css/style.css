@@ -87,6 +87,29 @@ body {
     border-color: #172B4D;
 }
 
+.btn-light {
+    box-shadow: 0 3px 6px 0 rgba(44, 40, 40, 0.11);
+    background-color: #ffffff;
+    color: #959595;
+}
+
+.dot {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border: #959595 1px solid;
+    border-radius: 50%;
+}
+
+.dot-merah {
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background-color: #b20838;
+    border: #b20838 1px solid;
+    border-radius: 50%;
+}
+
 .alert-danger {
     color: #ffffff;
     background-color: #b20838;
