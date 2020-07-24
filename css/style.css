@@ -240,6 +240,10 @@ input[type=number] {
     margin-top: 70px;
 }
 
+.d-mt-100 {
+    margin-top: 100px;
+}
+
 .dropdownProfile {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: fixed;
@@ -279,6 +283,10 @@ div.card {
     margin: 0;
 }
 
+.logoTengah {
+    margin-left: 200px;
+}
+
 .carousel-indicators {
     z-index: 2;
 }
@@ -309,6 +317,11 @@ div.card {
     width: 500px;
     right: 0px;
     display: none;
+}
+
+.bg-primary {
+    background-color: #172B4D!important;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 450px) {

@@ -170,70 +170,25 @@
         </div>
     </div>
 
-    <!-- konten header-->
-    <div class="d-mt-70 d-bg-red p-3">
-        <div class="d-flex align-items-center border-r-5 d-bg-white p-2" style="width: 300px;">
-            <p class="d-font-weight-600 m-0 mr-5">Home</p>
-            <p class="m-0"><i class="fa fa-home"></i> Home - Pembayaran</p>
-        </div>
-    </div>
-
     <!-- konten isi -->
-    <div id="isiKonten" class="container">
-        <div class="text-center mt-3">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" onclick="btnTunai()" class="btn btn-danger d-font-weight-600 py-2 px-4">Tunai</button>
-                <button type="button" onclick="btnKredit()" class="btn btn-light d-font-weight-600 py-2 px-4">Kredit</button>
+    <div class="container-fluid d-mt-100">
+        <div class="card border-r-15">
+            <div class="card-body text-center">
+                <img src="img/ceklis.jpg" alt="">
+                <p class="text-center">Terima kasih atas pemesanan Anda. Segera lakukan penerimaan barang di menu <br> Pemesanan ketika barang telah sampai di toko Anda</p>
             </div>
         </div>
-        <div class="card mt-5">
-            <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <img src="img/cod.png" width="40px" alt="">
-                        <p class="text-secondary d-font-weight-600 mb-0" style="margin-left: 38px;">Cash On Delivery</p>
-                    </div>
-                    <p class="m-0 d-font-weight-600 text-secondary">Rp. 20.000.000</p>
-                </div>
-                <div class="mt-2 text-right">
-                    <button class="btn btn-danger d-font-weight-600 px-5">Pilih</button>
-                </div>
-            </div>
-        </div>
-        <div class="card mt-3 mb-5">
+        <div class="card my-3 border-r-15">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-2 cbd">
-                        <img src="img/cbd.png" width="40px" alt="">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <p class="d-font-weight-600">ID Pemesanan</p>
+                        <p class="d-font-weight-600">Cara Pemesanan</p>
                     </div>
-                    <div class="col-6 cashBeforeD">
-                        <div class="d-flex align-items-center">
-                            <p class="m-0 d-font-weight-600 text-secondary">Cash Before Delivery</p>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-light d-font-weight-600">Tunai</button>
-                            <button class="btn btn-danger d-font-weight-600">Bank</button>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-danger d-font-weight-600 d-font-s-15 px-3">Mandiri</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BCA</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BRI</button>
-                        </div>
-                        <div class="mt-3">
-                            <img src="img/Mandiri_logo.png" width="100px" alt="">
-                        </div>
-                        <div class="mt-3">
-                            <p class="m-0 d-font-s-10">Nomor Rekening</p>
-                            <p class="d-font-weight-600">1234 - 3920 - 3123 -1245 </p>
-                            <p class="m-0 d-font-s-10">Nomor Pemilik Rekening</p>
-                            <p class="d-font-weight-600">Muhammad Faisal Tanjung </p>
-                        </div>
-                    </div>
-                    <div class="col-4 pl-0 pilih">
-                        <div class="d-flex flex-column h-100">
-                            <p class="m-0 d-font-weight-600 text-secondary text-right">Rp 2.000.000</p>
-                            <button class="btn btn-danger d-font-weight-600 px-5 mt-auto ml-auto">Pilih</button>
-                        </div>
+                    <div class="col-sm-6">
+                        <p class="d-font-weight-600">SALE/AT/2020/01/0021</p>
+                        <p class="d-font-weight-600">Kredit Dengan Distributor</p>
                     </div>
                 </div>
             </div>
@@ -258,9 +213,12 @@
         //membuat footer yg dinamis
         var h = window.innerHeight;
         var h2 = $(document).height();
+        console.log(h, h2);
         if (h2 == h) {
             $('#footer').addClass("kelasKaki");
         }
+
+        $('#footer').removeClass("kelasKaki");
 
         // script for mobile version
         function myFunction(x) {
@@ -268,166 +226,18 @@
                 document.getElementById('navbarCari').style.display = 'none';
                 document.getElementById('fotoUser').style.display = 'none';
                 document.getElementById('namaUser').style.display = 'none';
+                $(".btnCekSekarang").removeClass("px-5 py-3");
+                $(".produk").addClass("col-6");
+                $(".subtotal").removeClass("col-10").addClass("col-8");
+                $(".checkout").removeClass("col-2").addClass("col-4");
             } else {
                 document.getElementById('navbarCari').style.display = '';
                 document.getElementById('fotoUser').style.display = '';
                 document.getElementById('namaUser').style.display = '';
-                $(".cbd").removeClass("col-1").addClass("col-2");
-                $(".cashBeforeD").removeClass("col-7").addClass("col-6 px-0");
-                $(".pilih").addClass("pl-0");
+                $(".btnCekSekarang").addClass("px-5 py-3");
+                $(".subtotal").removeClass("col-8").addClass("col-10");
+                $(".checkout").removeClass("col-4").addClass("col-2");
             }
-        }
-
-        function btnTunai() {
-            document.getElementById('isiKonten').innerHTML = `
-            <div class="text-center mt-3">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" onclick="btnTunai()" class="btn btn-danger d-font-weight-600 py-2 px-4">Tunai</button>
-                    <button type="button" onclick="btnKredit()" class="btn btn-light d-font-weight-600 py-2 px-4">Kredit</button>
-                </div>
-            </div>
-            <div class="card mt-5">
-                <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="img/cod.png" width="40px" alt="">
-                            <p class="text-secondary d-font-weight-600 mb-0" style="margin-left: 38px;">Cash On Delivery</p>
-                        </div>
-                        <p class="m-0 d-font-weight-600 text-secondary">Rp. 20.000.000</p>
-                    </div>
-                    <div class="mt-2 text-right">
-                        <button class="btn btn-danger d-font-weight-600 px-5">Pilih</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card mt-3 mb-5">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-1">
-                            <img src="img/cbd.png" width="40px" alt="">
-                        </div>
-                        <div class="col-7">
-                            <div class="d-flex align-items-center">
-                                <p class="m-0 d-font-weight-600 text-secondary">Cash Before Delivery</p>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-light d-font-weight-600">Tunai</button>
-                                <button class="btn btn-danger d-font-weight-600">Bank</button>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-danger d-font-weight-600 d-font-s-15 px-3">Mandiri</button>
-                                <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BCA</button>
-                                <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BRI</button>
-                            </div>
-                            <div class="mt-3">
-                                <img src="img/Mandiri_logo.png" width="100px" alt="">
-                            </div>
-                            <div class="mt-3">
-                                <p class="m-0 d-font-s-10">Nomor Rekening</p>
-                                <p class="d-font-weight-600">1234 - 3920 - 3123 -1245 </p>
-                                <p class="m-0 d-font-s-10">Nomor Pemilik Rekening</p>
-                                <p class="d-font-weight-600">Muhammad Faisal Tanjung </p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="d-flex flex-column h-100">
-                                <p class="m-0 d-font-weight-600 text-secondary text-right">Rp 2.000.000</p>
-                                <button class="btn btn-danger d-font-weight-600 px-5 mt-auto ml-auto">Pilih</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            `;
-        }
-
-        function btnKredit() {
-            document.getElementById('isiKonten').innerHTML = `
-            <div class="text-center mt-3">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" onclick="btnTunai()" class="btn btn-light d-font-weight-600 py-2 px-4">Tunai</button>
-                <button type="button" onclick="btnKredit()" class="btn btn-danger d-font-weight-600 py-2 px-4">Kredit</button>
-            </div>
-        </div>
-        <div class="card mt-5">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="img/kreditpro.png" class="gambarKreditPro" alt="">
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <p class="m-0 d-font-weight-600 text-secondary">Kredit dengan Partner</p>
-                        </div>
-                        <div class="mt-3">
-                            <p class="m-0 d-font-weight-600">Rencana Pelunasan</p>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-danger d-font-weight-600 d-font-s-10 px-3">15 Hari</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-10 px-3">30 Hari</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-10 px-3">45 Hari</button>
-                        </div>
-                    </div>
-                    <div class="col-4 pl-0">
-                        <div class="d-flex flex-column h-100">
-                            <p class="m-0 d-font-weight-600 text-secondary text-right">Rp 2.000.000</p>
-                            <button class="btn btn-danger d-font-weight-600 px-5 mt-auto ml-auto">Pilih</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mt-3 mb-5">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="img/cbd.png" width="40px" alt="">
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <p class="m-0 d-font-weight-600 text-secondary">Cash Before Delivery</p>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-light d-font-weight-600">Tunai</button>
-                            <button class="btn btn-danger d-font-weight-600">Bank</button>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-danger d-font-weight-600 d-font-s-15 px-3">Mandiri</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BCA</button>
-                            <button class="btn btn-light d-font-weight-600 d-font-s-15 px-3">BRI</button>
-                        </div>
-                        <div class="mt-3">
-                            <img src="img/Mandiri_logo.png" width="100px" alt="">
-                        </div>
-                        <div class="mt-3">
-                            <p class="m-0 d-font-s-10">Nomor Rekening</p>
-                            <p class="d-font-weight-600">1234 - 3920 - 3123 -1245 </p>
-                            <p class="m-0 d-font-s-10">Nomor Pemilik Rekening</p>
-                            <p class="d-font-weight-600">Muhammad Faisal Tanjung </p>
-                        </div>
-                    </div>
-                    <div class="col-4 pl-0 d-flex flex-column justify-content-between">
-                        <div>
-                            <p class="m-0 d-font-weight-600 text-secondary text-right">Rp 2.000.000</p>
-                        </div>
-                        <div>
-                            <div>
-                                <p class="m-0 d-font-weight-600">Rencana Pelunasan</p>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-danger d-font-weight-600 d-font-s-10 px-3">15 Hari</button>
-                                <button class="btn btn-light d-font-weight-600 d-font-s-10 px-3">30 Hari</button>
-                                <button class="btn btn-light d-font-weight-600 d-font-s-10 px-3">45 Hari</button>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <button class="btn btn-danger d-font-weight-600 px-5 mt-auto ml-auto">Pilih</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            `;
         }
 
         var x = window.matchMedia("(max-width: 450px)");
