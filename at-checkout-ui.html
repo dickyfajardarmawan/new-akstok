@@ -292,7 +292,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <button class="btn btn-danger d-font-weight-600">Ganti Alamat</button>
+                            <button type="button" onclick="w3_open('modalAlamat');" class="btn btn-danger d-font-weight-600">Ganti Alamat</button>
                         </div>
                     </div>
                 </div>
@@ -305,11 +305,210 @@
                                 <input type="date" class="form-control">
                             </div>
                             <div class="form-group">
-                                <p class="text-secondary">Catatan</p>
+                                <p class="t ext-secondary">Catatan</p>
                                 <textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
                             </div>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Alamat -->
+    <div id="modalAlamat" class="w3-modal">
+        <div class="w3-modal-content border-r-15" style="max-width: 750px;">
+            <div class="w3-container">
+                <span onclick="w3_close('modalAlamat')" class="w3-button w3-display-topright"><i class="fa fa-times"></i></span>
+                <p class="d-font-weight-600 m-0 pt-2">Daftar Alamat</p>
+                <p class="d-font-s-11">Daftar Alamat Toko yang dimiliki atau menambah alamat baru</p>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa fa-home fa-2x text-danger"></i>
+                            </div>
+                            <div class="col-9">
+                                <p class="d-font-weight-600 m-0">Toko Cilandak</p>
+                                <p class="">Faisal, 081221966527</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <i class="fa fa-star text-danger"></i>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-9">
+                                <p>JL. Dimana aja asal berdua, Sumatera Barat, Kota Padang - 25171</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <p type="button" onclick="w3_open('modalPerbaruiAlamat')" class="d-font-weight-600 text-danger">Perbarui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa fa-home fa-2x text-danger"></i>
+                            </div>
+                            <div class="col-9">
+                                <p class="d-font-weight-600 m-0">Toko Cilandak</p>
+                                <p class="">Faisal, 081221966527</p>
+                            </div>
+                            <div class="col-2 text-right">
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-9">
+                                <p>JL. Dimana aja asal berdua, Sumatera Barat, Kota Padang - 25171</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <p type="button" onclick="w3_open('modalPerbaruiAlamat')" class="d-font-weight-600 text-danger">Perbarui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right mt-5 mb-3">
+                    <button onclick="w3_open('modalTambahAlamat');w3_close('modalAlamat')" class="btn btn-danger">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Alamat -->
+    <div id="modalTambahAlamat" class="w3-modal">
+        <div class="w3-modal-content border-r-15" style="max-width: 750px;">
+            <div class="w3-container">
+                <span onclick="w3_close('modalTambahAlamat')" class="w3-button w3-display-topright"><i class="fa fa-times"></i></span>
+                <p class="d-font-weight-600 pt-2">Tambah Alamat</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Penerima</label>
+                        <input type="text" class="form-control" id="" placeholder="Nama Penerima">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Nomor Telfon</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="812-219-652-7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Alamat</label>
+                        <input type="text" class="form-control" id="" placeholder="Alamat">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="">Provinsi</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Provinsi</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="">Kota/Kabupaten</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kota/Kabupaten</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="">Kecamatan</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kecamatan</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kelurahan/Desa</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kelurahan/Desa</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kode Pos</label>
+                            <input type="text" class="form-control" placeholder="Kode Pos">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right mt-5 mb-3">
+                    <button class="btn btn-danger">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Perbarui Alamat -->
+    <div id="modalPerbaruiAlamat" class="w3-modal">
+        <div class="w3-modal-content border-r-15" style="max-width: 750px;">
+            <div class="w3-container">
+                <span onclick="w3_close('modalPerbaruiAlamat')" class="w3-button w3-display-topright"><i class="fa fa-times"></i></span>
+                <p class="d-font-weight-600 pt-2">Perbarui Alamat</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Penerima</label>
+                        <input type="text" class="form-control" id="" placeholder="Nama Penerima">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Nomor Telfon</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="812-219-652-7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Alamat</label>
+                        <input type="text" class="form-control" id="" placeholder="Alamat">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="">Provinsi</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Provinsi</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="">Kota/Kabupaten</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kota/Kabupaten</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="">Kecamatan</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kecamatan</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kelurahan/Desa</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kelurahan/Desa</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kode Pos</label>
+                            <input type="text" class="form-control" placeholder="Kode Pos">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right mt-5 mb-3">
+                    <button class="btn btn-danger">Perbarui</button>
                 </div>
             </div>
         </div>
