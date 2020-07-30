@@ -179,19 +179,224 @@
     </div>
 
     <!-- konten isi -->
-    <div class="container-fluid">
+    <div class="container-fluid my-3">
         <div class="row">
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between">
-
+                        <div onclick="buka('profil')" class="d-flex justify-content-between align-items-center mb-3 btn btn-light">
+                            <p class="d-font-s-20 m-0">Perbarui Profil</p>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div onclick="buka('alamat')" class="d-flex justify-content-between align-items-center mb-3 btn btn-light">
+                            <p class="d-font-s-20 m-0">Daftar Alamat</p>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div onclick="buka('kataSandi')" class="d-flex justify-content-between align-items-center mb-3 btn btn-light">
+                            <p class="d-font-s-20 m-0">Ganti Kata Sandi</p>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div onclick="buka('syarat')" class="d-flex justify-content-between align-items-center mb-3 btn btn-light">
+                            <p class="d-font-s-20 m-0">Syarat & Ketentuan</p>
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3 btn btn-light">
+                            <p class="d-font-s-20 m-0">Keluar</p>
+                            <i class="fa fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-8">
+                <div class="card">
+                    <div id="selectedMenu" class="card-body">
+                        <p class="d-font-s-20 d-font-weight-600 m-0">Perbarui Profile</p>
+                        <p>Memperbarui Profil Anda</p>
+                        <form>
+                            <div class="row form-group">
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">ID Bisnis Kokoh</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-1 mb-3"></div>
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">Nama Toko</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">Nama Depan</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-1 mb-3"></div>
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">Nama Belakang</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">Email</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="col-1 mb-3"></div>
+                                <div class="col-2 mb-3">
+                                    <label class="m-0">Nomor Telfon</label>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal Tambah Alamat -->
+    <div id="modalTambahAlamat" class="w3-modal">
+        <div class="w3-modal-content border-r-15" style="max-width: 750px;">
+            <div class="w3-container">
+                <span onclick="w3_close('modalTambahAlamat')" class="w3-button w3-display-topright"><i class="fa fa-times"></i></span>
+                <p class="d-font-weight-600 pt-2">Tambah Alamat</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Penerima</label>
+                        <input type="text" class="form-control" id="" placeholder="Nama Penerima">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Nomor Telfon</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="812-219-652-7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Alamat</label>
+                        <input type="text" class="form-control" id="" placeholder="Alamat">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="">Provinsi</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Provinsi</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="">Kota/Kabupaten</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kota/Kabupaten</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="">Kecamatan</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kecamatan</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kelurahan/Desa</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kelurahan/Desa</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kode Pos</label>
+                            <input type="text" class="form-control" placeholder="Kode Pos">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right mt-5 mb-3">
+                    <button class="btn btn-danger">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Perbarui Alamat -->
+    <div id="modalPerbaruiAlamat" class="w3-modal">
+        <div class="w3-modal-content border-r-15" style="max-width: 750px;">
+            <div class="w3-container">
+                <span onclick="w3_close('modalPerbaruiAlamat')" class="w3-button w3-display-topright"><i class="fa fa-times"></i></span>
+                <p class="d-font-weight-600 pt-2">Perbarui Alamat</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Penerima</label>
+                        <input type="text" class="form-control" id="" placeholder="Nama Penerima">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="exampleInputEmail1">Nomor Telfon</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="812-219-652-7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Alamat</label>
+                        <input type="text" class="form-control" id="" placeholder="Alamat">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="">Provinsi</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Provinsi</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="">Kota/Kabupaten</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kota/Kabupaten</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="">Kecamatan</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kecamatan</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kelurahan/Desa</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Kelurahan/Desa</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Kode Pos</label>
+                            <input type="text" class="form-control" placeholder="Kode Pos">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right mt-5 mb-3">
+                    <button class="btn btn-danger">Perbarui</button>
+                </div>
             </div>
         </div>
     </div>
@@ -216,6 +421,8 @@
         var h2 = $(document).height();
         if (h2 == h) {
             $('#footer').addClass("kelasKaki");
+        } else {
+            $('#footer').removeClass("kelasKaki");
         }
 
         // script for mobile version
@@ -249,6 +456,162 @@
 
         function w3_close(namanya) {
             document.getElementById(namanya).style.display = "none";
+        }
+
+        function buka(nama) {
+            if (nama == 'profil') {
+                document.getElementById('selectedMenu').innerHTML = `
+                <p class="d-font-s-20 d-font-weight-600 m-0">Perbarui Profile</p>
+                <p>Memperbarui Profil Anda</p>
+                <form>
+                    <div class="row form-group">
+                        <div class="col-2 mb-3">
+                            <label class="m-0">ID Bisnis Kokoh</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-1 mb-3"></div>
+                        <div class="col-2 mb-3">
+                            <label class="m-0">Nama Toko</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-2 mb-3">
+                            <label class="m-0">Nama Depan</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-1 mb-3"></div>
+                        <div class="col-2 mb-3">
+                            <label class="m-0">Nama Belakang</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-2 mb-3">
+                            <label class="m-0">Email</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="col-1 mb-3"></div>
+                        <div class="col-2 mb-3">
+                            <label class="m-0">Nomor Telfon</label>
+                        </div>
+                        <div class="col-3 mb-3">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </form>
+                `;
+            } else if (nama == 'alamat') {
+                document.getElementById('selectedMenu').innerHTML = `
+                <p class="d-font-s-20 d-font-weight-600 m-0">Daftar Alamat</p>
+                <p>Daftar Alamat Toko yang dimiliki atau menambah alamat baru</p>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa fa-home fa-2x text-danger"></i>
+                            </div>
+                            <div class="col-9">
+                                <p class="d-font-weight-600 m-0">Toko Cilandak</p>
+                                <p class="">Faisal, 081221966527</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <i class="fa fa-star text-danger"></i>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-9">
+                                <p>JL. Dimana aja asal berdua, Sumatera Barat, Kota Padang - 25171</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <p type="button" onclick="w3_open('modalPerbaruiAlamat')" class="d-font-weight-600 text-danger">Perbarui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa fa-home fa-2x text-danger"></i>
+                            </div>
+                            <div class="col-9">
+                                <p class="d-font-weight-600 m-0">Toko Cilandak</p>
+                                <p class="">Faisal, 081221966527</p>
+                            </div>
+                            <div class="col-2 text-right">
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-9">
+                                <p>JL. Dimana aja asal berdua, Sumatera Barat, Kota Padang - 25171</p>
+                            </div>
+                            <div class="col-2 text-right">
+                                <p type="button" onclick="w3_open('modalPerbaruiAlamat')" class="d-font-weight-600 text-danger">Perbarui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right mt-5 mb-3">
+                    <button onclick="w3_open('modalTambahAlamat');w3_close('modalAlamat')" class="btn btn-danger">Tambah</button>
+                </div>
+                `;
+                $('#footer').removeClass("kelasKaki");
+            } else if (nama == 'kataSandi') {
+                document.getElementById('selectedMenu').innerHTML = `
+                <p class="d-font-s-20 d-font-weight-600 m-0">Ganti Kata Sandi</p>
+                <p>Mengganti Kata Sandi Anda</p>
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Kata Sandi Lama</label>
+                        <div class="col-sm-8">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Kata Sandi Baru</label>
+                        <div class="col-sm-8">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Ulangi Kata Sandi Baru</label>
+                        <div class="col-sm-8">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right">
+                    <buttton class="btn btn-danger">Simpan</buttton>
+                </div>
+                `;
+            } else if (nama == 'syarat') {
+                document.getElementById('selectedMenu').innerHTML = `
+                <p class="d-font-s-20 d-font-weight-600 m-0">Syarat dan Ketentuan</p>
+                <p></p>
+                <p class="text-secondary mb-1">Baca Syarat dan Ketentuan dengan mengunduh <a href="javascript:void(0)" class="text-danger">dokumen ini</a></p>
+                <p class="text-secondary">Baca Kebijakan dan Privasi dengan mengunduh <a href="javascript:void(0)" class="text-danger">dokumen ini</a></p>
+                `;
+            }
         }
     </script>
 </body>

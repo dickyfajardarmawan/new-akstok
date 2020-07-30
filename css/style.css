@@ -240,6 +240,43 @@ input[type=number] {
     margin-top: 70px;
 }
 
+.dot-red {
+    height: 10px;
+    width: 10px;
+    background-color: #b20838;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-green {
+    height: 10px;
+    width: 10px;
+    background-color: #01a365;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Pilih File";
+}
+
+.custom-file-label::after {
+    color: #ffffff;
+    background-color: #172B4D;
+}
+
+.progress {
+    height: 0.4rem;
+}
+
+.dot-blue {
+    height: 10px;
+    width: 10px;
+    background-color: #1381db;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .d-mt-100 {
     margin-top: 100px;
 }
@@ -385,5 +422,8 @@ div.card {
     }
     .gambarKreditPro {
         width: 40px;
+    }
+    .w3-modal-content {
+        margin-top: 70px;
     }
 }
