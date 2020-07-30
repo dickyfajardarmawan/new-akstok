@@ -361,6 +361,11 @@ div.card {
     color: #ffffff;
 }
 
+.black-line {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
 @media only screen and (max-width: 450px) {
     #notif {
         padding-right: 10px;
