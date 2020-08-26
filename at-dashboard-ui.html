@@ -307,108 +307,22 @@
             <button id="slide" class="btn btn-light" type="button"><i class="fa fa-chevron-circle-right"></i></button>
         </div>
 
-        <div class="container produks mx-auto row row-cols-1 row-cols-md-3 mt-4">
-            <div class="col mb-4">
-                <div class="card produk h-100">
-                    <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" class="card-img-top" alt="...">
-                    <div class="card-body p-0 text-center">
-                        <h5 class="card-title">Semen Dynamix 40 Kg</h5>
-                        <p class="card-text text-secondary">Rp. 50.000 / Zak</p>
-                        <div class="beli">
-                            <button onclick="buying(2)" class="btn btn-danger py-2 w-100">Beli</button>
-                        </div>
-                        <div class="afterBuy" style="display: none;">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="hapusMin">
-                                    <button onclick="hapusBtn(2)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
-                                    <button onclick="kurangBtn(2)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
-                                </div>
-                                <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
-                                <button onclick="tambahBtn(2)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card produk h-100">
-                    <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" class="card-img-top" alt="...">
-                    <div class="card-body p-0 text-center">
-                        <h5 class="card-title">Semen Dynamix 40 Kg</h5>
-                        <p class="card-text text-secondary">Rp. 50.000 / Zak</p>
-                        <div class="beli">
-                            <button onclick="buying(2)" class="btn btn-danger py-2 w-100">Beli</button>
-                        </div>
-                        <div class="afterBuy" style="display: none;">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="hapusMin">
-                                    <button onclick="hapusBtn(2)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
-                                    <button onclick="kurangBtn(2)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
-                                </div>
-                                <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
-                                <button onclick="tambahBtn(2)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card produk h-100">
-                    <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" class="card-img-top" alt="...">
-                    <div class="card-body p-0 text-center">
-                        <h5 class="card-title">Semen Dynamix 40 Kg</h5>
-                        <p class="card-text text-secondary">Rp. 50.000 / Zak</p>
-                        <div class="beli">
-                            <button onclick="buying(2)" class="btn btn-danger py-2 w-100">Beli</button>
-                        </div>
-                        <div class="afterBuy" style="display: none;">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="hapusMin">
-                                    <button onclick="hapusBtn(2)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
-                                    <button onclick="kurangBtn(2)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
-                                </div>
-                                <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
-                                <button onclick="tambahBtn(2)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card produk h-100">
-                    <img src="img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png" class="card-img-top" alt="...">
-                    <div class="card-body p-0 text-center">
-                        <h5 class="card-title">Semen Dynamix 40 Kg</h5>
-                        <p class="card-text text-secondary">Rp. 50.000 / Zak</p>
-                        <div class="beli">
-                            <button onclick="buying(2)" class="btn btn-danger py-2 w-100">Beli</button>
-                        </div>
-                        <div class="afterBuy" style="display: none;">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="hapusMin">
-                                    <button onclick="hapusBtn(2)" class="btn btn-light hapus"><i class="fa fa-trash d-merah"></i></button>
-                                    <button onclick="kurangBtn(2)" class="btn btn-light kurang" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
-                                </div>
-                                <input type="number" style="max-width: 50px;" value="1" min="0" max="99" class="form-control text-center num mx-3">
-                                <button onclick="tambahBtn(2)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="listDataProduk" class="container produks mx-auto row row-cols-1 row-cols-md-3 mt-4">
+            
         </div>
 
         <div id="subtotal" class="fixed-bottom m-3">
             <div class="row">
-                <div class="subtotal col-10">
-                    <div class="card border-r-25">
-                        <div class="card-body" style="padding: 1.05rem;">
-                            <span class="text-secondary">Subtotal (2/5)</span> Rp. 250.000
+                <div class="subtotal col-sm-10">
+                    <div class="card">
+                        <div class="card-body d-flex justify-content-between" style="padding: 1.05rem;">
+                            <span id="idSubtotal" class="text-secondary">Subtotal (0/0)</span>
+                            <span id="totalHarga">Rp. 0</span>
                         </div>
                     </div>
                 </div>
-                <div class="checkout col-2">
-                    <button class="btn btn-danger w-100 py-3 border-r-25">Checkout</button>
+                <div class="checkout col-sm-2">
+                    <button class="btn btn-danger w-100 py-3">Checkout</button>
                 </div>
             </div>
         </div>
@@ -475,7 +389,64 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="json/ListProduk.json"></script>
     <script>
+        //function rupiah
+        function formatRupiah(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        //get json data
+        fetch('json/ListProduk.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var isiProduk = data.listProduk.length;
+            if (isiProduk == 0) {
+                document.getElementById('listDataProduk').innerHTML = `
+                    <div class="col-4"></div>
+                    <div class="d-font-s-20 my-5 text-center col-4">Tidak ada Produk</div>
+                    <div class="col-4"></div>
+                `;
+            } else {
+                for (var i = 0; i < isiProduk; i++) {
+                    listTampungQty.push(0);
+                    document.getElementById('listDataProduk').innerHTML += `
+                    <div class="col mb-4">
+                        <div class="card produk h-100">
+                            <img src="` + data.listProduk[i].image + `" class="card-img-top" alt="...">
+                            <div class="card-body p-0 text-center">
+                                <h5 class="card-title">` + data.listProduk[i].productName + `</h5>
+                                <p class="card-text text-secondary">Rp. ` + formatRupiah(data.listProduk[i].priceCash) + ` / `+ data.listProduk[i].uomName +`</p>
+                                <div class="beli">
+                                    <button onclick="buying(`+ i +`,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-danger py-2 w-100">Beli</button>
+                                </div>
+                                <div class="afterBuy" style="display: none;">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="hapusMin">
+                                            <button onclick="hapusBtn(`+ i +`,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="hapus`+ i +`" class="btn btn-light"><i class="fa fa-trash d-merah"></i></button>
+                                            <button onclick="kurangBtn(`+ i +`,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="kurang`+ i +`" class="btn btn-light" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
+                                        </div>
+                                        <input type="number" style="max-width: 50px;" id="no`+ i +`" value="` + data.listProduk[i].kelipatan + `)" min="0" max="99" class="form-control text-center mx-3">
+                                        <button onclick="tambahBtn(`+ i +`,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                }
+                console.log(listTampungQty);
+            }
+        }
+
         // fungsi tanda panah kategori
         var button = document.getElementById('slide');
         button.onclick = function() {
@@ -523,8 +494,6 @@
                 document.getElementById('namaUser').style.display = 'none';
                 $(".btnCekSekarang").removeClass("px-5 py-3");
                 $(".produks").removeClass("row-cols-md-3").addClass("row-cols-md-2");
-                $(".subtotal").removeClass("col-10").addClass("col-8");
-                $(".checkout").removeClass("col-2").addClass("col-4");
             } else {
                 // desktop version
                 document.getElementById('navbarCari').style.display = '';
@@ -532,48 +501,83 @@
                 document.getElementById('namaUser').style.display = '';
                 $(".btnCekSekarang").addClass("px-5 py-3");
                 $(".produks").removeClass("row-cols-md-2").addClass("row-cols-md-3");
-                $(".subtotal").removeClass("col-8").addClass("col-10");
-                $(".checkout").removeClass("col-4").addClass("col-2");
             }
         }
 
-
-
         document.getElementById("subtotal").style.display = "none";
 
-        function buying(index) {
-            document.getElementById("subtotal").style.display = "block";
+        function buying(index, kelipatan, harga) {
+            listTampungQty[index] += kelipatan;
+            item++;
+            totalQty += kelipatan;
+            totalPrice += harga;
+            console.log(listTampungQty);
+            if (totalQty == 0) {
+                document.getElementById("subtotal").style.display = "none";
+            } else {
+                document.getElementById("subtotal").style.display = "block";
+            }
+            document.getElementById("idSubtotal").innerHTML = "Subtotal (" + item + "/" + totalQty + ")";
+            document.getElementById("totalHarga").innerHTML = "Rp. " + formatRupiah(totalPrice);
             document.getElementsByClassName('beli')[index].style.display = 'none';
             document.getElementsByClassName('afterBuy')[index].style.display = 'block';
+            document.getElementById('no' + index).value = listTampungQty[index];
         }
 
-        function hapusBtn(index) {
-            document.getElementById("subtotal").style.display = "none";
+        function hapusBtn(index, kelipatan, harga) {
+            listTampungQty[index] -= kelipatan;
+            item--;
+            totalQty -= kelipatan;
+            totalPrice -= harga;
+            console.log(listTampungQty);
+            if (totalQty == 0) {
+                document.getElementById("subtotal").style.display = "none";
+            } else {
+                document.getElementById("subtotal").style.display = "block";
+            }
+            document.getElementById("idSubtotal").innerHTML = "Subtotal (" + item + "/" + totalQty + ")";
+            document.getElementById("totalHarga").innerHTML = "Rp. " + formatRupiah(totalPrice);
             document.getElementsByClassName('afterBuy')[index].style.display = 'none';
             document.getElementsByClassName('beli')[index].style.display = 'block';
         }
 
-        function tambahBtn(index) {
-            let ubahAngka = parseInt($('.num')[index].value)
-            $('.num')[index].value = ubahAngka + 1;
-            if ($('.num')[index].value > 1) {
-                document.getElementsByClassName('hapus')[index].style.display = 'none';
-                document.getElementsByClassName('kurang')[index].style.display = 'block';
+        // Data Collection
+        var listTampungQty = [];
+        var item = 0;
+        var totalQty = 0;
+        var totalPrice = 0;
+
+        function tambahBtn(index, kelipatan, harga) {
+            listTampungQty[index] += kelipatan;
+            totalQty += kelipatan;
+            totalPrice += harga;
+            document.getElementById('no' + index).value = listTampungQty[index];
+            document.getElementById("idSubtotal").innerHTML = "Subtotal (" + item + "/" + totalQty + ")";
+            document.getElementById("totalHarga").innerHTML = "Rp. " + formatRupiah(totalPrice);
+            console.log(listTampungQty);
+            if (document.getElementById('no' + index).value > kelipatan) {
+                document.getElementById('hapus' + index).style.display = 'none';
+                document.getElementById('kurang' + index).style.display = 'block';
             } else {
-                document.getElementsByClassName('hapus')[index].style.display = 'block';
-                document.getElementsByClassName('kurang')[index].style.display = 'none';
+                document.getElementById('hapus' + index).style.display = 'block';
+                document.getElementById('kurang' + index).style.display = 'none';
             }
         }
 
-        function kurangBtn(index) {
-            let ubahAngka = parseInt($('.num')[index].value)
-            $('.num')[index].value = ubahAngka - 1;
-            if ($('.num')[index].value > 1) {
-                document.getElementsByClassName('hapus')[index].style.display = 'none';
-                document.getElementsByClassName('kurang')[index].style.display = 'block';
+        function kurangBtn(index, kelipatan, harga) {
+            listTampungQty[index] -= kelipatan;
+            totalQty -= kelipatan;
+            totalPrice -= harga;
+            document.getElementById('no' + index).value = listTampungQty[index];
+            document.getElementById("idSubtotal").innerHTML = "Subtotal (" + item + "/" + totalQty + ")";
+            document.getElementById("totalHarga").innerHTML = "Rp. " + formatRupiah(totalPrice);
+            console.log(listTampungQty);
+            if (document.getElementById('no' + index).value > kelipatan) {
+                document.getElementById('hapus' + index).style.display = 'none';
+                document.getElementById('kurang' + index).style.display = 'block';
             } else {
-                document.getElementsByClassName('hapus')[index].style.display = 'block';
-                document.getElementsByClassName('kurang')[index].style.display = 'none';
+                document.getElementById('hapus' + index).style.display = 'block';
+                document.getElementById('kurang' + index).style.display = 'none';
             }
         }
 

@@ -1,0 +1,53 @@
+{
+	"listProduk" : [
+		{
+			"image":"../img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png",
+			"productCode":"121-301-0050",
+			"priceGroupId":10,
+			"productId":12,
+			"uomName":"SAK",
+			"tokoId":1212,
+			"priceCredit":50000,
+			"kelipatan":10,
+			"productName":"SEMEN PCC ZAK 40KG",
+			"priceCash":40000
+		}, 
+		{
+			"image":"../img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png",
+			"productCode":"121-301-0110",
+			"priceGroupId":502,
+			"productId":29,
+			"uomName":"SAK",
+			"tokoId":1212,
+			"priceCredit":45000,
+			"kelipatan":10,
+			"productName":"SEMEN PPC ZAK 40KG",
+			"priceCash":40000
+		}, 
+		{
+			"image":"../img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png",
+			"productCode":"121-301-0110",
+			"priceGroupId":503,
+			"productId":14,
+			"uomName":"SAK",
+			"tokoId":1212,
+			"priceCredit":45000,
+			"kelipatan":10,
+			"productName":"SEMEN PPC ZAK 40KG",
+			"priceCash":40000
+		}, 
+		{
+			"image":"../img/c8dec3ee-c9f0-407e-9899-9ba77af90032.png",
+			"productCode":"121-301-0240",
+			"priceGroupId":504,
+			"productId":17,
+			"uomName":"SAK",
+			"tokoId":1212,
+			"priceCredit":55000,
+			"kelipatan":10,
+			"productName":"SEMEN PUTIH ZAK 40 KG",
+			"priceCash":50000
+		}
+	]
+
+}
