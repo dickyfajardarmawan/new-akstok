@@ -66,96 +66,97 @@
         </div>
     </div>
 
-    <div>
-        <div class="w-100" style="margin-top: 160px;">
-            <div class="card mx-auto" style="max-width: 540px;">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="img/logo-at.png" class="text-center" width="200px" alt="">
-                        <p class="m-1">Silahkan masukan ID Bisnis Kokoh Anda untuk melanjutkan regitrasi!</p>
-                        <p>Sudah pernah Registrasi? <span class="text-danger">Login</span></p>
+    <div class="w-100" style="margin-top: 160px;">
+        <div class="card mx-auto" style="max-width: 540px;">
+            <div class="card-body">
+                <div class="text-center">
+                    <img src="img/logo-at.png" class="text-center" width="200px" alt="">
+                    <p class="m-1">Silahkan masukan ID Bisnis Kokoh Anda untuk melanjutkan regitrasi!</p>
+                    <p>Sudah pernah Registrasi? <span class="text-danger">Login</span></p>
+                </div>
+                <div class="form">
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text d-bg-white"><img src="img/logo-at.png" width="60px" alt=""></div>
+                            </div>
+                            <input id="inputIDBK" type="text" class="form-control" placeholder="ID Bisnis Kokoh (9 Digit)">
+                        </div>
                     </div>
-                    <div class="form">
+                    <div class="text-center">
+                        <button onclick="cekIDBisnisKokoh()" class="btn btn-danger px-3">Cari</button>
+                    </div>
+                    <div class="collapse mt-5" id="collapseExample">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Toko" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-primary">Generate</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text d-bg-white"><img src="img/logo-at.png" width="60px" alt=""></div>
+                                    <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
                                 </div>
-                                <input onkeyup="cekIDBisnisKokoh()" id="inputIDBK" type="text" class="form-control" placeholder="ID Bisnis Kokoh (9 Digit)">
+                                <input type="text" class="form-control" placeholder="812-219-652-7">
                             </div>
                         </div>
-                        <div class="collapse" id="collapseExample">
-                            <div class="form-group">
-                                <input type="text" placeholder="Nama Toko" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control" placeholder="Email">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text bg-primary">Generate</div>
-                                    </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Depan" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Belakang" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" placeholder="Kata Sandi">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye"></i></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text bg-primary"><img class="mr-1" src="img/bendera indonesia.png" width="25px" alt=""> +62</div>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="812-219-652-7">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" placeholder="Ulang Kata Sandi">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-eye"></i></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Nama Depan" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Didaftarkan Oleh :</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">SIG</label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Nama Belakang" class="form-control">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">SBI</label>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control" placeholder="Kata Sandi">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-eye"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Punya Kode Referal Salesperson ?
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control" placeholder="Ulang Kata Sandi">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-eye"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Saya telah membaca dan menyetujui <span class="text-danger">Syarat & Ketentuan</span>
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <label>Didaftarkan Oleh :</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">SIG</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">SBI</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                      Punya Kode Referal Salesperson ?
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Saya telah membaca dan menyetujui <span class="text-danger">Syarat & Ketentuan</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-danger">Daftar</button>
-                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-danger">Daftar</button>
                         </div>
                     </div>
                 </div>
@@ -217,16 +218,10 @@
             if (inputIDBK == idBisnisKokoh) {
                 console.log('true');
                 $('#collapseExample').collapse('show');
-                document.getElementById("footer").style.marginTop = "170px";
             } else {
                 $('#collapseExample').collapse('hide');
-                document.getElementById("footer").style.marginTop = "0";
             }
         }
-    </script>
-    <script>
-        var a = ''
-        console.log('a = ', a);
     </script>
 </body>
 
