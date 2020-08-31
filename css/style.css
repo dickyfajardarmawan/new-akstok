@@ -3,6 +3,10 @@ body {
     background-color: #f1f3f9;
 }
 
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Unggah";
+}
+
 .d-bg-dark {
     color: #fff;
     background-color: #515151;
