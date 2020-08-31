@@ -366,6 +366,12 @@ div.card {
     border-top: 1px solid #ccc;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 @media only screen and (max-width: 450px) {
     #notif {
         padding-right: 10px;
