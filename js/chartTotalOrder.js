@@ -1,17 +1,13 @@
 var chart3 = new CanvasJS.Chart("chartContainer3", {
-    exportEnabled: true,
     animationEnabled: true,
     title: {
-        text: "Car Parts Sold in Different States"
+        text: "Total Orders & DO"
     },
-    subtitles: [{
-        text: "Click Legend to Hide or Unhide Data Series"
-    }],
     axisX: {
-        title: "States"
+        valueFormatString: "DD"
     },
     axisY: {
-        title: "Oil Filter - Units",
+        title: "Quantum",
         titleFontColor: "#4F81BC",
         lineColor: "#4F81BC",
         labelFontColor: "#4F81BC",
@@ -27,7 +23,7 @@ var chart3 = new CanvasJS.Chart("chartContainer3", {
         includeZero: true
     },
     toolTip: {
-        shared: true
+        enabled: true
     },
     legend: {
         cursor: "pointer",
@@ -35,29 +31,24 @@ var chart3 = new CanvasJS.Chart("chartContainer3", {
     },
     data: [{
             type: "column",
-            name: "Oil Filter",
-            showInLegend: true,
-            yValueFormatString: "#,##0.# Units",
+            yValueFormatString: "Quantum #,##0.#",
             dataPoints: [
-                { label: "New Jersey", y: 19034.5 },
-                { label: "Texas", y: 20015 },
-                { label: "Oregon", y: 25342 },
-                { label: "Montana", y: 20088 },
-                { label: "Massachusetts", y: 28234 }
+                { x: new Date(2017, 6, 24), y: 19034.5 },
+                { x: new Date(2017, 6, 25), y: 20015 },
+                { x: new Date(2017, 6, 26), y: 25342 },
+                { x: new Date(2017, 6, 27), y: 20088 },
+                { x: new Date(2017, 6, 28), y: 28234 }
             ]
         },
         {
             type: "column",
-            name: "Clutch",
-            axisYType: "secondary",
-            showInLegend: true,
-            yValueFormatString: "#,##0.# Units",
+            yValueFormatString: "Quantum #,##0.#",
             dataPoints: [
-                { label: "New Jersey", y: 210.5 },
-                { label: "Texas", y: 135 },
-                { label: "Oregon", y: 425 },
-                { label: "Montana", y: 130 },
-                { label: "Massachusetts", y: 528 }
+                { x: new Date(2017, 6, 24), y: 21000 },
+                { x: new Date(2017, 6, 25), y: 13500 },
+                { x: new Date(2017, 6, 26), y: 42500 },
+                { x: new Date(2017, 6, 27), y: 13000 },
+                { x: new Date(2017, 6, 28), y: 52800 }
             ]
         }
     ]

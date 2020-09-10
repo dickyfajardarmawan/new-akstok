@@ -162,13 +162,15 @@
     </div>
 
     <!-- dropdown notifikasi -->
-    <div id="dropdownNotifikasi" class="dropdownNotifikasi w3-animate-top d-bg-white p-3 border-r-15" style="width: 400px;display: none;">
-        <h3>Latest Information</h3>
-        <hr style="border-top: 1px solid rgb(145, 145, 145)">
-        <div class="d-flex align-items-center my-2">
-            <div class="mr-3">
-                <i class="fa fa-bell fa-2x" style="color: rgb(0, 180, 111);"></i>
-            </div>
+    <div id="dropdownNotifikasi" class="dropdownNotifikasi w3-animate-top d-bg-white" style="width: 400px;display: none;">
+        <div class="d-bg-red" style="color: #fff;">
+            <h3 class="my-0 p-3">Informasi Terbaru</h3>
+        </div>
+        <div class="w3-bar" style="background-color: #7f0000; color: #fff;">
+            <button class="w3-bar-item w3-button w3-opacity-min tablink w3-red" onclick="openNotif(event, 'Pemberitahuan')" style="width:50%;">Pemberitahuan</button>
+            <button class="w3-bar-item w3-button w3-opacity-min tablink" onclick="openNotif(event, 'Pesan')" style="width:50%;">Pesan</button>
+        </div>
+        <div id="Pemberitahuan" class="p-3 my-2 notif">
             <div class="w-100">
                 <div class="d-flex align-items-center justify-content-between">
                     <p class="text-secondary">Notifikasi Penjualan</p>
@@ -177,28 +179,13 @@
                 <p>Pembelian anda diterima oleh PT. Sejahtera</p>
             </div>
         </div>
-        <div class="d-flex align-items-center my-2">
-            <div class="mr-3">
-                <i class="fa fa-envelope-o fa-2x" style="color: rgb(207, 54, 54);"></i>
-            </div>
+        <div id="Pesan" class="p-3 my-2 notif" style="display:none">
             <div class="w-100">
                 <div class="d-flex align-items-center justify-content-between">
                     <p class="text-secondary">Pesan dari Principal</p>
                     <p class="text-secondary">2 hr ago</p>
                 </div>
                 <p>Pembelian anda diterima oleh PT. Sejahtera</p>
-            </div>
-        </div>
-        <div class="d-flex align-items-center my-2">
-            <div class="mr-3">
-                <i class="fa fa-star-o fa-2x" style="color: rgb(211, 197, 69);"></i>
-            </div>
-            <div class="w-100">
-                <div class="d-flex align-items-center justify-content-between">
-                    <p class="text-secondary">Poin</p>
-                    <p class="text-secondary">3 hr ago</p>
-                </div>
-                <p>Selamat anda mendapatkan 100 poin dari Order SALE/AT/1000/000</p>
             </div>
         </div>
         <div class="text-center my-3">
@@ -308,7 +295,7 @@
         </div>
 
         <div id="listDataProduk" class="container produks mx-auto row row-cols-1 row-cols-md-3 mt-4">
-            
+
         </div>
 
         <div id="subtotal" class="fixed-bottom m-3">
@@ -391,6 +378,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="json/ListProduk.json"></script>
     <script>
+        function openNotif(evt, notifName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("notif");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(notifName).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+
+        // function openNotif(notifName) {
+        //     var i;
+        //     var x = document.getElementsByClassName("notif");
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     document.getElementById(notifName).style.display = "block";
+        // }
+
         //function rupiah
         function formatRupiah(num) {
             return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -398,15 +408,16 @@
 
         //get json data
         fetch('json/ListProduk.json')
-            .then(function (response) {
+            .then(function(response) {
                 return response.json();
             })
-            .then(function (data) {
+            .then(function(data) {
                 appendData(data);
             })
-            .catch(function (err) {
+            .catch(function(err) {
                 console.log('error: ' + err);
             });
+
         function appendData(data) {
             var isiProduk = data.listProduk.length;
             if (isiProduk == 0) {
@@ -424,18 +435,18 @@
                             <img src="` + data.listProduk[i].image + `" class="card-img-top" alt="...">
                             <div class="card-body p-0 text-center">
                                 <h5 class="card-title">` + data.listProduk[i].productName + `</h5>
-                                <p class="card-text text-secondary">Rp. ` + formatRupiah(data.listProduk[i].priceCash) + ` / `+ data.listProduk[i].uomName +`</p>
+                                <p class="card-text text-secondary">Rp. ` + formatRupiah(data.listProduk[i].priceCash) + ` / ` + data.listProduk[i].uomName + `</p>
                                 <div class="beli">
-                                    <button onclick="buying(`+ i +`,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-danger py-2 w-100">Beli</button>
+                                    <button onclick="buying(` + i + `,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-danger py-2 w-100">Beli</button>
                                 </div>
                                 <div class="afterBuy" style="display: none;">
                                     <div class="d-flex justify-content-center align-items-center">
                                         <div class="hapusMin">
-                                            <button onclick="hapusBtn(`+ i +`,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="hapus`+ i +`" class="btn btn-light"><i class="fa fa-trash d-merah"></i></button>
-                                            <button onclick="kurangBtn(`+ i +`,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="kurang`+ i +`" class="btn btn-light" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
+                                            <button onclick="hapusBtn(` + i + `,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="hapus` + i + `" class="btn btn-light"><i class="fa fa-trash d-merah"></i></button>
+                                            <button onclick="kurangBtn(` + i + `,` + data.listProduk[i].kelipatan + `, ` + data.listProduk[i].priceCash + `)" id="kurang` + i + `" class="btn btn-light" style="display: none;"><i class="fa fa-minus d-merah"></i></button>
                                         </div>
-                                        <input type="number" style="max-width: 50px;" id="no`+ i +`" value="` + data.listProduk[i].kelipatan + `)" min="0" max="99" class="form-control text-center mx-3">
-                                        <button onclick="tambahBtn(`+ i +`,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
+                                        <input type="number" style="max-width: 50px;" id="no` + i + `" value="` + data.listProduk[i].kelipatan + `)" min="0" max="99" class="form-control text-center mx-3">
+                                        <button onclick="tambahBtn(` + i + `,` + data.listProduk[i].kelipatan + `,` + data.listProduk[i].priceCash + `)" class="btn btn-light"><i class="fa fa-plus d-merah"></i></button>
                                     </div>
                                 </div>
                             </div>

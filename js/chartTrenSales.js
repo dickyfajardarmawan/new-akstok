@@ -1,14 +1,13 @@
 var chart2 = new CanvasJS.Chart("chartContainer2", {
     animationEnabled: true,
     title: {
-        text: "Daily High Temperature at Different Beaches"
+        text: "Tren Sales"
     },
     axisX: {
-        valueFormatString: "DD MMM,YY"
+        valueFormatString: "DD"
     },
     axisY: {
-        title: "Temperature (in °C)",
-        suffix: " °C"
+        title: "Quantum"
     },
     legend: {
         cursor: "pointer",
@@ -16,12 +15,12 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
         itemclick: toggleDataSeries
     },
     toolTip: {
-        shared: true
+        enabled: true
     },
     data: [{
-            name: "Myrtle Beach",
+            name: "Semen Tonasa",
             type: "spline",
-            yValueFormatString: "#0.## °C",
+            yValueFormatString: "Quantum #0.##",
             showInLegend: true,
             dataPoints: [
                 { x: new Date(2017, 6, 24), y: 31 },
@@ -34,9 +33,9 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
             ]
         },
         {
-            name: "Martha Vineyard",
+            name: "Semen Padang",
             type: "spline",
-            yValueFormatString: "#0.## °C",
+            yValueFormatString: "Quantum #0.##",
             showInLegend: true,
             dataPoints: [
                 { x: new Date(2017, 6, 24), y: 20 },
@@ -49,9 +48,9 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
             ]
         },
         {
-            name: "Nantucket",
+            name: "Semen Dynamix",
             type: "spline",
-            yValueFormatString: "#0.## °C",
+            yValueFormatString: "Quantum #0.##",
             showInLegend: true,
             dataPoints: [
                 { x: new Date(2017, 6, 24), y: 22 },

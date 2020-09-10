@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" value="10" id="num" min="10" onkeyup="ubah()">
+
+    <script>
+        function ubah() {
+            console.log(num.value);
+            console.log(num.min);
+            // var nilaiMin = parseInt()
+            console.log(num.value, "<=", num.min);
+            if (num.value <= 10) {
+                num.value = 0;
+            } else {
+                console.log('hadel');
+            }
+        }
+    </script>
+</body>
+
+</html>

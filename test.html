@@ -172,6 +172,21 @@
     </div>
 
     <!-- isi konten -->
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
+    <p>lorem ipsum the end</p>
 
     <!-- footer -->
     <div id="footer" class="d-flex justify-content-between align-items-center p-3 d-bg-dark ">
@@ -190,10 +205,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
         //membuat footer yg dinamis
-        var h = window.innerHeight;
-        var h2 = $(document).height();
-        if (h2 == h) {
-            $('#footer').addClass("kelasKaki");
+        function cekDinamisFooter() {
+            var h = window.innerHeight;
+            var h2 = $(document).height();
+            console.log(h, ">", h2);
+            if (h >= h2) {
+                $('#footer').addClass("kelasKaki");
+            }
+        }
+
+        cekDinamisFooter();
+
+        document.onclick = inputChange;
+
+        function inputChange(e) {
+            cekDinamisFooter();
         }
 
         // script responsive
